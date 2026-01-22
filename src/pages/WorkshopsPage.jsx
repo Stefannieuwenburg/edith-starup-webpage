@@ -1,21 +1,19 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 
 const WorkshopsPage = () => {
-  const [loadForm, setLoadForm] = useState(false);
 
+  // Script direct laden bij pagina-opstart
   useEffect(() => {
-    if (!loadForm) return;
-
     const script = document.createElement("script");
     script.src = "https://centerpiedproductions.activehosted.com/f/embed.php?id=5";
-    script.charset = "utf-8";
     script.async = true;
+    script.charset = "utf-8";
     document.body.appendChild(script);
 
     return () => {
       document.body.removeChild(script);
     };
-  }, [loadForm]);
+  }, []);
 
   return (
     <div className="bg-[#F5F1EB] text-[#2C2C2C] min-h-screen font-sans">
@@ -25,12 +23,14 @@ const WorkshopsPage = () => {
         <h2 className="text-4xl font-bold mb-2">Workshops</h2>
         <p className="text-lg text-[#8A8A8A]">Helder Inzicht voor uw Pad</p>
         <p className="max-w-2xl mx-auto mt-4 text-md">
-          Jij zit zelf met vragen. Je zoekt pad. Moar zetten inzicht in. Is het je niet om Edith vragen bolck wet en schijf pad. En igan ken te buthumen een Edideren sen is gegrantend part lin line sued decortes vraag.
+          Jij zit zelf met vragen. Je zoekt pad. Moar zetten inzicht in. Is het je niet om Edith vragen bolck wet en schijf pad. 
+          En igan ken te buthumen een Edideren sen is gegrantend part lin line sued decortes vraag.
         </p>
       </section>
 
       {/* Cards Section */}
       <section className="py-12 px-6 grid md:grid-cols-3 gap-8">
+
         {/* Card 1 */}
         <div className="bg-white p-6 rounded shadow">
           <h3 className="text-xl font-semibold mb-2">
@@ -72,33 +72,29 @@ const WorkshopsPage = () => {
             <li>Locatie: online</li>
           </ul>
         </div>
+
       </section>
 
-      {/* Call to Action */}
+      {/* Form Section */}
       <section className="text-center py-12 px-6">
-        <h4 className="text-lg font-medium mb-4">Inschrijven & Praktijktraining</h4>
-        <p className="text-[#8A8A8A] max-w-xl mx-auto mb-6">
-          Een zin drievoud van praktisch inzicht over het maje ervaring justinter praktijkspore ervaring – dit (in) – ethiek en reflectie.
-        </p>
 
-        {/* Button that loads the form */}
-        <button
-          onClick={() => setLoadForm(true)}
-          className="bg-[#D4B483] text-white px-6 py-3 rounded hover:bg-[#c3a06f] transition"
-        >
-          Bekijk Data & Meld Je Aan
-        </button>
+        {/* Jouw tekst blijft nu staan */}
+        <div className="max-w-xl mx-auto mb-10">
+          <h4 className="text-lg font-medium mb-4">Inschrijven & Praktijktraining</h4>
+          <p className="text-[#8A8A8A]">
+            Een zin drievoud van praktisch inzicht over het maje ervaring justinter praktijkspore ervaring – dit (in) – ethiek en reflectie.
+          </p>
+        </div>
 
-        {/* Form appears here after click */}
-        {loadForm && (
-          <div className="mt-8">
-            <div id="ac-form"></div>
-          </div>
-        )}
+        {/* Formulier in eigen container zodat AC het niet overschrijft */}
+        <div className="mt-8">
+          <div className="_form_5"></div>
+        </div>
+
       </section>
+
     </div>
   );
 };
 
 export default WorkshopsPage;
-
