@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const Workshops = () => {
+const WorkshopPage = () => {
   return (
     <div className="bg-[#F5F1EB] text-[#2C2C2C] min-h-screen font-sans">
       
@@ -68,4 +68,4 @@ const Workshops = () => {
   );
 };
 
-export default Workshops;
+export default WorkshopPage;
