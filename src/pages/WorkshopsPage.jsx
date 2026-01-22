@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 
 const WorkshopsPage = () => {
 
-  // Script direct laden bij pagina-opstart
+  // ActiveCampaign script laden
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://centerpiedproductions.activehosted.com/f/embed.php?id=5";
@@ -18,79 +18,61 @@ const WorkshopsPage = () => {
   return (
     <div id="workshops" className="bg-[#F5F1EB] text-[#2C2C2C] min-h-screen font-sans">
 
-      {/* Hero Section */}
-      <section className="text-center py-16 px-6">
-        <h2 className="text-4xl font-bold mb-2">Workshops</h2>
-        <p className="text-lg text-[#8A8A8A]">Helder Inzicht voor uw Pad</p>
-        <p className="max-w-2xl mx-auto mt-4 text-md">
-          Jij zit zelf met vragen. Je zoekt pad. Moar zetten inzicht in. Is het je niet om Edith vragen bolck wet en schijf pad. 
-          En igan ken te buthumen een Edideren sen is gegrantend part lin line sued decortes vraag.
+      {/* HERO */}
+      <section className="text-center py-20 px-6">
+        <h1 className="text-4xl font-bold mb-4">Workshop Je Energie in Beweging</h1>
+        <p className="text-lg text-[#8A8A8A] max-w-2xl mx-auto">
+          Ontdek hoe jouw energie beweegt, waar het vastloopt en hoe je deze natuurlijke stroom weer activeert.
         </p>
       </section>
 
-      {/* Cards Section */}
-      <section className="py-12 px-6 grid md:grid-cols-3 gap-8">
+      {/* INTRO BLOK */}
+      <section className="max-w-3xl mx-auto px-6 py-10 leading-relaxed text-lg space-y-6">
+        <p>
+          Voel je je soms leeg, gespannen of uit verbinding met jezelf zonder precies te weten waarom?
+          Je bent niet de enige. Veel mensen merken dat ze energie verliezen in hun dagelijkse leven,
+          maar weten niet goed wat hun lichaam eigenlijk probeert te vertellen.
+        </p>
 
-        {/* Card 1 */}
-        <div className="bg-white p-6 rounded shadow">
-          <h3 className="text-xl font-semibold mb-2">
-            Masterclass: De Interne Kompas{" "}
-            <span className="text-sm text-[#8A8A8A]">(Advanced)</span>
-          </h3>
-          <ul className="list-disc list-inside text-[#8A8A8A] text-sm mt-2">
-            <li>Zelfreflectie en inzicht</li>
-            <li>Groepsgesprekken & coaching</li>
-            <li>Duur: 2 dagen</li>
-            <li>Locatie: op locatie of online</li>
-          </ul>
-        </div>
+        <p>
+          Tijdens deze workshop van 2,5 uur ontdek je hoe energie in jouw lichaam beweegt,
+          waar het soms vastloopt en hoe je die natuurlijke stroom weer kunt activeren.
+          Door middel van ademhaling, aandacht en eenvoudige lichaamsgerichte oefeningen leer je subtieler voelen
+          wat er in je speelt — fysiek, mentaal en emotioneel.
+        </p>
 
-        {/* Card 2 */}
-        <div className="bg-white p-6 rounded shadow">
-          <h3 className="text-xl font-semibold mb-2">
-            Training: Helder Leiderschap{" "}
-            <span className="text-sm text-[#8A8A8A]">(Intermediate)</span>
-          </h3>
-          <ul className="list-disc list-inside text-[#8A8A8A] text-sm mt-2">
-            <li>Communicatie & besluitvorming</li>
-            <li>Teammanagement</li>
-            <li>Duur: 3 dagen</li>
-            <li>Locatie: op locatie</li>
-          </ul>
-        </div>
+        <p>
+          De workshop biedt je niet alleen inzicht, maar ook praktische tools om meer rust, balans en vitaliteit
+          te ervaren in je dagelijks leven. Je hoeft geen ervaring te hebben, alleen de wens om beter in je vel te zitten
+          en te begrijpen wat jouw energie nodig heeft.
+        </p>
 
-        {/* Card 3 */}
-        <div className="bg-white p-6 rounded shadow">
-          <h3 className="text-xl font-semibold mb-2">
-            Workshop: De Krder-Luisteren{" "}
-            <span className="text-sm text-[#8A8A8A]">(Beginner)</span>
-          </h3>
-          <ul className="list-disc list-inside text-[#8A8A8A] text-sm mt-2">
-            <li>Actief luisteren & empathie</li>
-            <li>Rollenspellen & feedback</li>
-            <li>Duur: 1 dag</li>
-            <li>Locatie: online</li>
-          </ul>
-        </div>
+        <p>
+          We creëren een veilige en ontspannen omgeving waarin je mag onderzoeken, ervaren en weer thuiskomen in jezelf.
+          Kom zoals je bent en ontdek hoe het voelt als jouw energie weer vrij kan stromen.
+        </p>
 
+        <p className="font-semibold text-xl">
+          Klaar om weer écht te voelen?
+        </p>
+
+        <p>
+          Gun jezelf een moment van rust, inzicht en hernieuwde energie.
+          Schrijf je hieronder in voor <strong>“Workshop Je Energie in Beweging”</strong> en geef jouw lichaam en geest
+          de aandacht die ze verdienen.
+        </p>
       </section>
 
-      {/* Form Section */}
-      <section className="text-center py-12 px-6">
+      {/* FORMULIER */}
+      <section className="text-center py-16 px-6">
+        <h2 className="text-2xl font-semibold mb-4">Inschrijven</h2>
+        <p className="text-[#8A8A8A] max-w-xl mx-auto mb-10">
+          Vul hieronder je gegevens in om je plek te reserveren.
+        </p>
 
-        {/* Jouw tekst blijft nu staan */}
-        <div className="max-w-xl mx-auto mb-10">
-          <h4 className="text-lg font-medium mb-4">Inschrijven & Praktijktraining</h4>
-          <p className="text-[#8A8A8A]">
-            Een zin drievoud van praktisch inzicht over het maje ervaring justinter praktijkspore ervaring – dit (in) – ethiek en reflectie.
-          </p>
-        </div>
-
-        {/* Formulier in eigen container zodat AC het niet overschrijft */}
-        <div className="mt-8">
+        <div className="max-w-xl mx-auto">
           <div className="_form_5"></div>
         </div>
-
       </section>
 
     </div>

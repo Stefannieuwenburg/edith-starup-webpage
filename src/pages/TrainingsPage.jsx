@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 
 const TrainingsPage = () => {
 
-  // ActiveCampaign script direct laden
+  // ActiveCampaign script laden
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://centerpiedproductions.activehosted.com/f/embed.php?id=7";
@@ -18,79 +18,117 @@ const TrainingsPage = () => {
   return (
     <div className="bg-[#F5F1EB] text-[#2C2C2C] min-h-screen font-sans">
 
-      {/* Hero Section */}
-      <section className="text-center py-16 px-6">
-        <h2 className="text-4xl font-bold mb-2">Trainingen</h2>
-        <p className="text-lg text-[#8A8A8A]">Helder Inzicht voor uw Pad</p>
-        <p className="max-w-2xl mx-auto mt-4 text-md">
-          Jij zit zelf met vragen. Je zoekt pad. Moar zetten inzicht in. Is het je niet om Edith vragen bolck wet en schijf pad.
-          En igan ken te buthumen een Edideren sen is gegrantend part lin line sued decortes vraag.
+      {/* HERO */}
+      <section className="text-center py-20 px-6">
+        <h1 className="text-4xl font-bold mb-4">Je Energie de Baas – De Basis</h1>
+        <p className="text-lg text-[#8A8A8A] max-w-2xl mx-auto">
+          Training voor meer energetische balans, bescherming en innerlijke kracht.
         </p>
       </section>
 
-      {/* Cards Section */}
-      <section className="py-12 px-6 grid md:grid-cols-3 gap-8">
+      {/* INTRO BLOK */}
+      <section className="max-w-3xl mx-auto px-6 py-10 leading-relaxed text-lg space-y-6">
 
-        {/* Card 1 */}
-        <div className="bg-white p-6 rounded shadow">
-          <h3 className="text-xl font-semibold mb-2">
-            Masterclass: De Interne Kompas{" "}
-            <span className="text-sm text-[#8A8A8A]">(Advanced)</span>
-          </h3>
-          <ul className="list-disc list-inside text-[#8A8A8A] text-sm mt-2">
-            <li>Zelfreflectie en inzicht</li>
-            <li>Groepsgesprekken & coaching</li>
-            <li>Duur: 2 dagen</li>
-            <li>Locatie: op locatie of online</li>
-          </ul>
-        </div>
+        <p>
+          Voel je vaak leeg of overprikkeld na contact met anderen?
+        </p>
 
-        {/* Card 2 */}
-        <div className="bg-white p-6 rounded shadow">
-          <h3 className="text-xl font-semibold mb-2">
-            Training: Helder Leiderschap{" "}
-            <span className="text-sm text-[#8A8A8A]">(Intermediate)</span>
-          </h3>
-          <ul className="list-disc list-inside text-[#8A8A8A] text-sm mt-2">
-            <li>Communicatie & besluitvorming</li>
-            <li>Teammanagement</li>
-            <li>Duur: 3 dagen</li>
-            <li>Locatie: op locatie</li>
-          </ul>
-        </div>
+        <p>
+          Je begint de dag vol energie, maar eindigt uitgeput zonder precies te weten waarom.
+          Alsof iemand aan je kracht heeft gezogen.
+        </p>
 
-        {/* Card 3 */}
-        <div className="bg-white p-6 rounded shadow">
-          <h3 className="text-xl font-semibold mb-2">
-            Workshop: De Krder-Luisteren{" "}
-            <span className="text-sm text-[#8A8A8A]">(Beginner)</span>
-          </h3>
-          <ul className="list-disc list-inside text-[#8A8A8A] text-sm mt-2">
-            <li>Actief luisteren & empathie</li>
-            <li>Rollenspellen & feedback</li>
-            <li>Duur: 1 dag</li>
-            <li>Locatie: online</li>
-          </ul>
-        </div>
+        <p>
+          Misschien merk je dat je energie van anderen overneemt of dat je overprikkeld raakt in drukke ruimtes.
+          Na een dag werken, boodschappen doen of sociale afspraken voel je je moe, gespannen of zwaar.
+        </p>
+
+        <p>
+          Je weet dat je gevoelig bent voor energie, maar niet hoe je jezelf kunt beschermen zonder je af te sluiten.
+          Herkenbaar? Dan is deze training voor jou.
+        </p>
+
+        {/* Over de training */}
+        <h2 className="text-2xl font-semibold mt-10">Over de training Je Energie de Baas – De Basis</h2>
+
+        <p>
+          Je Energie de Baas – De Basis is een praktische, ervaringsgerichte training in energetisch bewustzijn.
+          Je leert voelen wat energie is, hoe het zich door je lichaam beweegt en hoe je jezelf energetisch kunt beschermen
+          in het dagelijks leven.
+        </p>
+
+        <p>
+          We werken met eenvoudige oefeningen om te gronden, opladen en zuiveren. Zo leer je om stevig in je eigen energie
+          te blijven staan, ook als de wereld om je heen druk of intens is.
+        </p>
+
+        {/* Wat je leert */}
+        <h2 className="text-2xl font-semibold mt-10">Wat je leert in deze energie‑training</h2>
+
+        <ul className="list-disc ml-6 space-y-2">
+          <li>Wat energie is en hoe het zich in en om je lichaam bevindt.</li>
+          <li>Hoe je onderscheid maakt tussen jouw energie en die van anderen.</li>
+          <li>Wat resonantie en frequentie betekenen en hoe ze invloed hebben op je stemming en vitaliteit.</li>
+          <li>Hoe je je energetische ruimte zuiver en beschermd houdt.</li>
+          <li>Praktische oefeningen om te gronden, opladen en je energie te herstellen.</li>
+        </ul>
+
+        <p>
+          Je gaat het niet alleen begrijpen, maar ook voelen en ervaren zodat je direct verschil merkt in je dagelijks leven.
+        </p>
+
+        {/* Resultaat */}
+        <h2 className="text-2xl font-semibold mt-10">Resultaat: meer rust, kracht en helderheid</h2>
+
+        <p>
+          Na deze energetische training herken je meteen wat niet van jou is. Je staat stevig in je eigen energie,
+          ook op drukke plekken. Je voelt je beschermd, lichter en meer in balans.
+        </p>
+
+        <p>
+          Je bent minder vatbaar voor vermoeidheid of energielekken en je hebt een praktische toolkit om je energie te beheren,
+          beschermen en versterken.
+        </p>
+
+        <p>
+          Kortom: je ervaart meer rust, balans en innerlijke kracht van binnenuit.
+        </p>
+
+        {/* Voor wie */}
+        <h2 className="text-2xl font-semibold mt-10">Voor wie is deze training?</h2>
+
+        <ul className="list-disc ml-6 space-y-2">
+          <li>Als je hooggevoelig bent of snel energie van anderen oppikt.</li>
+          <li>Als je vaak leeg of moe bent na sociale contacten.</li>
+          <li>Als je wilt leren hoe je je energetische grenzen bewaakt.</li>
+          <li>Als je meer balans, focus en rust wilt ervaren in je dagelijks leven.</li>
+        </ul>
+
+        {/* CTA */}
+        <h2 className="text-2xl font-semibold mt-10">Klaar om je energie de baas te worden?</h2>
+
+        <p>
+          Gun jezelf de vrijheid om voluit te leven, zonder leeg te lopen op anderen.
+          Leer hoe je jouw energie kunt beschermen, versterken en zuiver houden.
+        </p>
+
+        <p>
+          Schrijf je hieronder in voor <strong>“Je Energie de Baas – De Basis”</strong> en ontdek hoe het voelt
+          om stevig, zuiver en vol vertrouwen in je eigen kracht te staan.
+        </p>
 
       </section>
 
-      {/* Form Section */}
-      <section className="text-center py-12 px-6">
+      {/* FORMULIER */}
+      <section className="text-center py-16 px-6">
+        <h2 className="text-2xl font-semibold mb-4">Inschrijven</h2>
+        <p className="text-[#8A8A8A] max-w-xl mx-auto mb-10">
+          Vul hieronder je gegevens in om je plek te reserveren.
+        </p>
 
-        {/* Jouw tekst */}
-        <div className="max-w-xl mx-auto mb-10">
-          <h4 className="text-lg font-medium mb-4">Inschrijven & Praktijktraining</h4>
-          <p className="text-[#8A8A8A]">
-            Een zin drievoud van praktisch inzicht over het maje ervaring justinter praktijkspore ervaring – dit (in) – ethiek en reflectie.
-          </p>
-        </div>
-
-        {/* Formulier container */}
-        <div className="mt-8">
+        <div className="max-w-xl mx-auto">
           <div className="_form_7"></div>
         </div>
-
       </section>
 
     </div>
