@@ -1,10 +1,24 @@
-import React from 'react';
-
+import React, { useState, useEffect } from "react";
 
 const WorkshopsPage = () => {
+  const [loadForm, setLoadForm] = useState(false);
+
+  useEffect(() => {
+    if (!loadForm) return;
+
+    const script = document.createElement("script");
+    script.src = "https://centerpiedproductions.activehosted.com/f/embed.php?id=5";
+    script.charset = "utf-8";
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, [loadForm]);
+
   return (
     <div className="bg-[#F5F1EB] text-[#2C2C2C] min-h-screen font-sans">
-      
 
       {/* Hero Section */}
       <section className="text-center py-16 px-6">
@@ -19,7 +33,10 @@ const WorkshopsPage = () => {
       <section className="py-12 px-6 grid md:grid-cols-3 gap-8">
         {/* Card 1 */}
         <div className="bg-white p-6 rounded shadow">
-          <h3 className="text-xl font-semibold mb-2">Masterclass: De Interne Kompas <span className="text-sm text-[#8A8A8A]">(Advanced)</span></h3>
+          <h3 className="text-xl font-semibold mb-2">
+            Masterclass: De Interne Kompas{" "}
+            <span className="text-sm text-[#8A8A8A]">(Advanced)</span>
+          </h3>
           <ul className="list-disc list-inside text-[#8A8A8A] text-sm mt-2">
             <li>Zelfreflectie en inzicht</li>
             <li>Groepsgesprekken & coaching</li>
@@ -30,7 +47,10 @@ const WorkshopsPage = () => {
 
         {/* Card 2 */}
         <div className="bg-white p-6 rounded shadow">
-          <h3 className="text-xl font-semibold mb-2">Training: Helder Leiderschap <span className="text-sm text-[#8A8A8A]">(Intermediate)</span></h3>
+          <h3 className="text-xl font-semibold mb-2">
+            Training: Helder Leiderschap{" "}
+            <span className="text-sm text-[#8A8A8A]">(Intermediate)</span>
+          </h3>
           <ul className="list-disc list-inside text-[#8A8A8A] text-sm mt-2">
             <li>Communicatie & besluitvorming</li>
             <li>Teammanagement</li>
@@ -41,7 +61,10 @@ const WorkshopsPage = () => {
 
         {/* Card 3 */}
         <div className="bg-white p-6 rounded shadow">
-          <h3 className="text-xl font-semibold mb-2">Workshop: De Krder-Luisteren <span className="text-sm text-[#8A8A8A]">(Beginner)</span></h3>
+          <h3 className="text-xl font-semibold mb-2">
+            Workshop: De Krder-Luisteren{" "}
+            <span className="text-sm text-[#8A8A8A]">(Beginner)</span>
+          </h3>
           <ul className="list-disc list-inside text-[#8A8A8A] text-sm mt-2">
             <li>Actief luisteren & empathie</li>
             <li>Rollenspellen & feedback</li>
@@ -57,15 +80,25 @@ const WorkshopsPage = () => {
         <p className="text-[#8A8A8A] max-w-xl mx-auto mb-6">
           Een zin drievoud van praktisch inzicht over het maje ervaring justinter praktijkspore ervaring – dit (in) – ethiek en reflectie.
         </p>
-        <button className="bg-[#D4B483] text-white px-6 py-3 rounded hover:bg-[#c3a06f] transition">
+
+        {/* Button that loads the form */}
+        <button
+          onClick={() => setLoadForm(true)}
+          className="bg-[#D4B483] text-white px-6 py-3 rounded hover:bg-[#c3a06f] transition"
+        >
           Bekijk Data & Meld Je Aan
         </button>
-      </section>
-      
 
-     
+        {/* Form appears here after click */}
+        {loadForm && (
+          <div className="mt-8">
+            <div id="ac-form"></div>
+          </div>
+        )}
+      </section>
     </div>
   );
 };
 
 export default WorkshopsPage;
+

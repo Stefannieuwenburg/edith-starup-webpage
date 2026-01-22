@@ -20,7 +20,6 @@ const HomePage = () => {
      {/* Aanbod + submenu samen */}
     <div className="relative group">
       <a href="#services" className="hover:underline">Aanbod</a>
-
       <div className="absolute left-0 hidden group-hover:block bg-white shadow-lg mt-2">
         <a href="#Een op een gesprek" className="block px-4 py-2 hover:bg-gray-100">Een op een gesprek</a>
         <a href="#Workshops" className="block px-4 py-2 hover:bg-gray-100">Workshops</a>
@@ -50,7 +49,7 @@ const HomePage = () => {
         </p>
       </section>
 
-      {/* Services */}
+      {/* Samen werken*/}
       <section id="services" className="py-12 px-6 grid md:grid-cols-3 gap-8 text-center">
         <div className="bg-white p-6 rounded shadow">
            <img src={compass} alt="Edith Image"  className="w-21 h-21  mx-auto mb-4" />
