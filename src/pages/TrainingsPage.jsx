@@ -1,14 +1,13 @@
-import React from 'react';
+import React from 'react'
 
 
-const WorkshopPage = () => {
+const TrainingsPage = () => {
   return (
     <div className="bg-[#F5F1EB] text-[#2C2C2C] min-h-screen font-sans">
       
-
       {/* Hero Section */}
       <section className="text-center py-16 px-6">
-        <h2 className="text-4xl font-bold mb-2">Workshops</h2>
+        <h2 className="text-4xl font-bold mb-2">Trainingen</h2>
         <p className="text-lg text-[#8A8A8A]">Helder Inzicht voor uw Pad</p>
         <p className="max-w-2xl mx-auto mt-4 text-md">
           Jij zit zelf met vragen. Je zoekt pad. Moar zetten inzicht in. Is het je niet om Edith vragen bolck wet en schijf pad. En igan ken te buthumen een Edideren sen is gegrantend part lin line sued decortes vraag.
@@ -61,11 +60,10 @@ const WorkshopPage = () => {
           Bekijk Data & Meld Je Aan
         </button>
       </section>
-      
 
-     
+      
     </div>
   );
 };
 
-export default WorkshopPage;
+export default TrainingsPage;

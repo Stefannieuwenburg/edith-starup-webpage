@@ -1,8 +1,8 @@
 import HomePage from "./HomePage"
 import './Style.css'
 import Footer from "./components/Footer"
-import TrainingsPage from "./pages/TrainingPage"
-import WorkshopsPage from "./pages/WorkshopPage"
+import TrainingsPage from "./pages/TrainingsPage"
+import WorkshopsPage from "./pages/WorkshopsPage"
 
 function App() {
  
