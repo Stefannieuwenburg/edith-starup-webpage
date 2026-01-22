@@ -1,15 +1,15 @@
 import HomePage from "./HomePage"
 import './Style.css'
-import Trainingen from "./Trainingen"
-import Workshops from "./workshops"
+import TrainingPage from "./pages/TrainingPage"
+import WorkshopPage from "./pages/WorkshopPage"
 
 function App() {
  
   return (
     <>
       <HomePage />
-      <Trainingen />
-      <Workshops />
+      <TrainingPage />
+      <WorkshopPage />
     </>
   )
 }
