@@ -16,7 +16,7 @@ const WorkshopsPage = () => {
   }, []);
 
   return (
-    <div className="bg-[#F5F1EB] text-[#2C2C2C] min-h-screen font-sans">
+    <div id="workshops" className="bg-[#F5F1EB] text-[#2C2C2C] min-h-screen font-sans">
 
       {/* Hero Section */}
       <section className="text-center py-16 px-6">
