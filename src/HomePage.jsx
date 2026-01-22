@@ -11,15 +11,28 @@ const HomePage = () => {
   return (
     <div className="bg-[#F5F1EB] text-[#2C2C2C] min-h-screen font-sans">
       {/* Header */}
-      <header className="bg-white py-6 px-8 flex justify-between items-center shadow-md">
-        <h1 className="text-2xl font-bold">Edith Samuels MEDIUM</h1>
-        <nav className="space-x-6 text-sm">
-          <a href="#hero" className="hover:underline">Home</a>
-          <a href="#intro" className="hover:underline">Over Edith</a>
-          <a href="#contact" className="hover:underline">Contact</a>
-          <a href="#services" className="hover:underline">Aanbod</a>
-        </nav>
-      </header>
+     <header className="bg-white py-6 px-8 flex justify-between items-center shadow-md">
+  <h1 className="text-2xl font-bold">Edith Samuels MEDIUM</h1>
+
+  <nav className="text-sm flex gap-6">
+    <a href="#hero" className="hover:underline">Home</a>
+    <a href="#intro" className="hover:underline">Over Edith</a>
+     {/* Aanbod + submenu samen */}
+    <div className="relative group">
+      <a href="#services" className="hover:underline">Aanbod</a>
+
+      <div className="absolute left-0 hidden group-hover:block bg-white shadow-lg mt-2">
+        <a href="#Een op een gesprek" className="block px-4 py-2 hover:bg-gray-100">Een op een gesprek</a>
+        <a href="#Workshops" className="block px-4 py-2 hover:bg-gray-100">Workshops</a>
+        <a href="#marketing" className="block px-4 py-2 hover:bg-gray-100">Trainingen</a>
+        <a href="#marketing" className="block px-4 py-2 hover:bg-gray-100">Zakkelijke beslisingen</a>
+        <a href="#seo" className="block px-4 py-2 hover:bg-gray-100">Persoolijk Begleidingstraject</a>
+      </div>
+    </div>
+    <a href="#contact" className="hover:underline">Contact</a>
+  </nav>
+</header>
+
 
       {/* Hero Section */}
       <section id="hero" className="text-center py-38 px-6 bg-cover bg-center" style={{ backgroundImage: `url(${vuurtoren})` }}>
