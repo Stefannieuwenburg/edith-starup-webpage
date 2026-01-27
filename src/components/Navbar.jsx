@@ -6,6 +6,13 @@ const Navbar = () => {
   const [desktopSubOpen, setDesktopSubOpen] = useState(false);
   const [mobileSubOpen, setMobileSubOpen] = useState(false);
 
+  // Helper: sluit ALLES
+  const closeAllMenus = () => {
+    setMenuOpen(false);
+    setDesktopSubOpen(false);
+    setMobileSubOpen(false);
+  };
+
   return (
     <header className="sticky top-0 z-50 bg-white py-6 px-8 shadow-md">
       <div className="flex justify-between items-center">
@@ -16,9 +23,11 @@ const Navbar = () => {
         {/* Desktop menu */}
         <nav className="hidden md:flex text-lg font-medium gap-8 items-center">
 
-          <Link to="/" className="hover:underline">Home</Link>
+          <Link to="/" className="hover:underline" onClick={closeAllMenus}>
+            Home
+          </Link>
 
-          {/* Aanbod submenu (desktop, click-based) */}
+          {/* Aanbod submenu (desktop) */}
           <div className="relative">
             <button
               type="button"
@@ -31,27 +40,52 @@ const Navbar = () => {
 
             {desktopSubOpen && (
               <div className="absolute left-0 top-full bg-white shadow-lg mt-2 z-50 py-2 min-w-[220px]">
-                <Link to="/een-op-een" className="block px-4 py-2 hover:bg-gray-100">
+                <Link
+                  to="/een-op-een"
+                  className="block px-4 py-2 hover:bg-gray-100"
+                  onClick={closeAllMenus}
+                >
                   Een op een gesprek
                 </Link>
-                <Link to="/workshops" className="block px-4 py-2 hover:bg-gray-100">
+                <Link
+                  to="/workshops"
+                  className="block px-4 py-2 hover:bg-gray-100"
+                  onClick={closeAllMenus}
+                >
                   Workshops
                 </Link>
-                <Link to="/trainingen" className="block px-4 py-2 hover:bg-gray-100">
+                <Link
+                  to="/trainingen"
+                  className="block px-4 py-2 hover:bg-gray-100"
+                  onClick={closeAllMenus}
+                >
                   Trainingen
                 </Link>
-                <Link to="/zakelijke-beslissingen" className="block px-4 py-2 hover:bg-gray-100">
+                <Link
+                  to="/zakelijke-beslissingen"
+                  className="block px-4 py-2 hover:bg-gray-100"
+                  onClick={closeAllMenus}
+                >
                   Zakelijke beslissingen
                 </Link>
-                <Link to="/persoonlijk" className="block px-4 py-2 hover:bg-gray-100">
+                <Link
+                  to="/persoonlijk"
+                  className="block px-4 py-2 hover:bg-gray-100"
+                  onClick={closeAllMenus}
+                >
                   Persoonlijk begeleidingstraject
                 </Link>
               </div>
             )}
           </div>
 
-          <Link to="/Over-Edith" className="hover:underline">Over Edith</Link>
-          <Link to="/contact" className="hover:underline">Contact</Link>
+          <Link to="/Over-Edith" className="hover:underline" onClick={closeAllMenus}>
+            Over Edith
+          </Link>
+
+          <Link to="/contact" className="hover:underline" onClick={closeAllMenus}>
+            Contact
+          </Link>
         </nav>
 
         {/* Hamburger button (mobile only) */}
@@ -67,7 +101,13 @@ const Navbar = () => {
       {menuOpen && (
         <nav className="md:hidden mt-4 text-lg font-medium space-y-4">
 
-          <Link to="/" className="block hover:underline">Home</Link>
+          <Link
+            to="/"
+            className="block hover:underline"
+            onClick={closeAllMenus}
+          >
+            Home
+          </Link>
 
           {/* Mobile submenu Aanbod */}
           <div>
@@ -81,27 +121,60 @@ const Navbar = () => {
 
             {mobileSubOpen && (
               <div className="ml-4 mt-2 space-y-2">
-                <Link to="/een-op-een" className="block hover:underline">
+                <Link
+                  to="/een-op-een"
+                  className="block hover:underline"
+                  onClick={closeAllMenus}
+                >
                   Een op een gesprek
                 </Link>
-                <Link to="/workshops" className="block hover:underline">
+                <Link
+                  to="/workshops"
+                  className="block hover:underline"
+                  onClick={closeAllMenus}
+                >
                   Workshops
                 </Link>
-                <Link to="/trainingen" className="block hover:underline">
+                <Link
+                  to="/trainingen"
+                  className="block hover:underline"
+                  onClick={closeAllMenus}
+                >
                   Trainingen
                 </Link>
-                <Link to="/zakelijke-beslissingen" className="block hover:underline">
+                <Link
+                  to="/zakelijke-beslissingen"
+                  className="block hover:underline"
+                  onClick={closeAllMenus}
+                >
                   Zakelijke beslissingen
                 </Link>
-                <Link to="/persoonlijk" className="block hover:underline">
+                <Link
+                  to="/persoonlijk"
+                  className="block hover:underline"
+                  onClick={closeAllMenus}
+                >
                   Persoonlijk begeleidingstraject
                 </Link>
               </div>
             )}
           </div>
 
-          <Link to="/Over-Edith" className="block hover:underline">Over Edith</Link>
-          <Link to="/contact" className="block hover:underline">Contact</Link>
+          <Link
+            to="/Over-Edith"
+            className="block hover:underline"
+            onClick={closeAllMenus}
+          >
+            Over Edith
+          </Link>
+
+          <Link
+            to="/contact"
+            className="block hover:underline"
+            onClick={closeAllMenus}
+          >
+            Contact
+          </Link>
         </nav>
       )}
     </header>
