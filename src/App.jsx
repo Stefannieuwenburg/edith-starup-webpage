@@ -4,9 +4,11 @@ import Navbar from "./components/Navbar";
 import './Style.css';
 import Footer from "./components/Footer";
 
+
 // Lazy-loaded pages
 const HomePage = lazy(() => import("./HomePage"));
 const ContactPage = lazy(() => import("./pages/ContactPage"));
+const Privacybeleid = lazy(() => import("./pages/Privacybelied"));
 const ServicePage = lazy(() => import("./pages/ServicePage"));
 const Testimonals = lazy(() => import("./pages/Testimonials"));
 const TrainingsPage = lazy(() => import("./pages/TrainingsPage"));
@@ -30,6 +32,7 @@ function App() {
           <Route path="/persoonlijk" element={<PersoonlijkPage />} />
           <Route path="/een-op-een" element={<EenOpEenPage />} />
           <Route path="/testimonials" element={<Testimonals />} />
+          <Route path="/privacybeleid" element={<Privacybeleid />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
         <Footer />
